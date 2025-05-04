@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controllers.LoginController" stylesheets="@style.css">
+    <children>
+        <VBox spacing="15" alignment="CENTER" AnchorPane.topAnchor="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20">
+            <Label text="Connexion" styleClass="header-label"/>
+            <TextField fx:id="emailField" promptText="Email"/>
+            <PasswordField fx:id="passwordField" promptText="Mot de passe"/>
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Se connecter" onAction="#handleLogin"/>
+                <Button text="Inscription" onAction="#goToSignup" styleClass="button"/>
+            </HBox>
+            <Label fx:id="messageLabel"/>
+        </VBox>
+    </children>
+</AnchorPane>

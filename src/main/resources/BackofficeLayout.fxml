@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controllers.LayoutController"
+            stylesheets="@style.css">
+
+    <!-- Sidebar Navigation -->
+    <left>
+        <VBox fx:id="sidebar" styleClass="sidebar" spacing="10" alignment="TOP_LEFT">
+            <Label text="BackOffice" styleClass="logo"/>
+            <Button fx:id="btnDashboard" text="Tableau de bord"   onAction="#goDashboard"/>
+            <Button fx:id="btnUsers"     text="Utilisateurs"      onAction="#goUsers"/>
+            <Button fx:id="btnTickets"   text="Tickets"          onAction="#goTickets"/>
+            <Button fx:id="btnReclamations" text="Réclamations"   onAction="#goReclamations"/>
+            <Button fx:id="btnSponsors"   text="Sponsors"         onAction="#goSponsors"/>
+            <Region VBox.vgrow="ALWAYS"/>
+            <Button fx:id="btnLogout"    text="Déconnexion"       onAction="#logout"/>
+        </VBox>
+    </left>
+
+    <!-- Main Content Area -->
+    <center>
+        <StackPane fx:id="contentPane" />
+    </center>
+
+</BorderPane>

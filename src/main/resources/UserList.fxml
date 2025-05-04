@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controllers.UserListController"
+            stylesheets="@style.css">
+    <!-- Top toolbar with title, search, and add button -->
+    <top>
+        <HBox styleClass="toolbar" spacing="10" alignment="CENTER_LEFT">
+            <Label text="Liste des utilisateurs" styleClass="title-label" />
+            <Region HBox.hgrow="ALWAYS" />
+            <TextField fx:id="searchField" promptText="Recherche..." styleClass="search-field" />
+            <Button fx:id="addUserButton" text="+ Ajouter" onAction="#goToAddUser" styleClass="primary-button" />
+        </HBox>
+    </top>
+
+    <!-- Center: styled TableView -->
+    <center>
+        <TableView fx:id="userTable" styleClass="styled-table" prefWidth="1000" prefHeight="600">
+            <columns>
+                <TableColumn fx:id="idCol"       text="ID"           prefWidth="60" />
+                <TableColumn fx:id="nomCol"      text="Nom"          prefWidth="150" />
+                <TableColumn fx:id="prenomCol"   text="Prénom"       prefWidth="150" />
+                <TableColumn fx:id="emailCol"    text="Email"        prefWidth="200" />
+                <TableColumn fx:id="telephoneCol" text="Téléphone"    prefWidth="150" />
+                <TableColumn fx:id="roleCol"     text="Rôle"         prefWidth="120" />
+                <TableColumn fx:id="statutCol"   text="Statut"       prefWidth="100" />
+                <TableColumn fx:id="actionCol"   text="Actions"      prefWidth="150" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

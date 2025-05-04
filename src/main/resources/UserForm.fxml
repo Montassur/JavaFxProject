@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="450" prefWidth="600" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.controllers.UserFormController">
+    <children>
+
+        <Label layoutX="30" layoutY="20" style="-fx-font-size: 18px;" text="Formulaire Utilisateur" />
+
+        <Label layoutX="30" layoutY="60" text="Nom:" />
+        <TextField fx:id="nomField" layoutX="170.0" layoutY="56.0" prefWidth="300" />
+
+        <Label layoutX="30" layoutY="100" text="Prénom:" />
+        <TextField fx:id="prenomField" layoutX="170.0" layoutY="96.0" prefWidth="300" />
+
+        <Label layoutX="30" layoutY="140" text="Email:" />
+        <TextField fx:id="emailField" layoutX="170.0" layoutY="136.0" prefWidth="300" />
+
+        <Label layoutX="30" layoutY="180" text="Téléphone:" />
+        <TextField fx:id="telephoneField" layoutX="170.0" layoutY="176.0" prefWidth="300" />
+
+        <Label layoutX="30" layoutY="220" text="Rôle:" />
+        <ComboBox fx:id="roleComboBox" layoutX="170.0" layoutY="216.0" prefWidth="300" />
+
+        <Label layoutX="30" layoutY="260" text="Mot de passe:" />
+        <PasswordField fx:id="motDePasseField" layoutX="170.0" layoutY="256.0" prefWidth="300" />
+
+        <Label layoutX="30" layoutY="300" text="Confirmer mot de passe:" />
+        <PasswordField fx:id="confirmerMotDePasseField" layoutX="170.0" layoutY="296.0" prefWidth="300" />
+
+        <CheckBox fx:id="activeCheckBox" layoutX="170.0" layoutY="330.0" text="Actif" />
+
+        <Button fx:id="ajouterBtn" layoutX="382.0" layoutY="370.0" onAction="#ajouterUtilisateur" text="Ajouter" />
+        <Button fx:id="modifierBtn" layoutX="270.0" layoutY="370.0" onAction="#ajouterUtilisateur" text="Modifier" visible="false"/>
+        <Button layoutX="462.0" layoutY="370.0" onAction="#retourVersListe" text="Retour" />
+
+    </children>
+</AnchorPane>

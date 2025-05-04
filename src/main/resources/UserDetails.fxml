@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.controllers.UserController">
+   <children>
+
+      <Label layoutX="30" layoutY="20" text="Nom:" />
+      <TextField fx:id="nomField" layoutX="174.0" layoutY="16.0" prefWidth="200" />
+
+      <Label layoutX="30" layoutY="60" text="Prénom:" />
+      <TextField fx:id="prenomField" layoutX="174.0" layoutY="56.0" prefWidth="200" />
+
+      <Label layoutX="30" layoutY="100" text="Numéro téléphone:" />
+      <TextField fx:id="numeroTelephoneField" layoutX="174.0" layoutY="96.0" prefWidth="200" />
+
+      <Label layoutX="30" layoutY="140" text="Email:" />
+      <TextField fx:id="emailField" layoutX="174.0" layoutY="136.0" prefWidth="200" />
+
+      <Label layoutX="30" layoutY="180" text="Rôle:" />
+      <ComboBox fx:id="roleComboBox" layoutX="174.0" layoutY="176.0" prefHeight="25.0" prefWidth="200.0" />
+
+      <Label layoutX="30" layoutY="220" text="Mot de passe:" />
+      <PasswordField fx:id="motDePasseField" layoutX="174.0" layoutY="216.0" prefWidth="200" />
+
+      <Label layoutX="30" layoutY="260" text="Confirmer mot de passe:" />
+      <PasswordField fx:id="confirmerMotDePasseField" layoutX="174.0" layoutY="256.0" prefWidth="200" />
+
+      <Button layoutX="50" layoutY="300" onAction="#ajouterUtilisateur" text="Ajouter Utilisateur" />
+      <Button layoutX="200" layoutY="300" onAction="#afficherUtilisateurs" text="Afficher Tous" />
+      <Button layoutX="350" layoutY="300" onAction="#modifierUtilisateur" text="Modifier Utilisateur" />
+      <Button layoutX="500" layoutY="300" onAction="#supprimerUtilisateur" text="Supprimer Utilisateur" />
+
+      <TableView fx:id="userTable" layoutX="30" layoutY="350" prefHeight="250" prefWidth="800">
+         <columns>
+            <TableColumn fx:id="idCol" prefWidth="50" text="ID" />
+            <TableColumn fx:id="nomCol" prefWidth="100" text="Nom" />
+            <TableColumn fx:id="prenomCol" prefWidth="100" text="Prénom" />
+            <TableColumn fx:id="emailCol" prefWidth="150" text="Email" />
+            <TableColumn fx:id="numeroTelephoneCol" prefWidth="100" text="Téléphone" />
+            <TableColumn fx:id="roleCol" prefWidth="100" text="Rôle" />
+            <TableColumn fx:id="statutCol" prefWidth="80" text="Statut" />
+            <TableColumn fx:id="actionCol" prefWidth="100" text="Action" />
+         </columns>
+      </TableView>
+
+   </children>
+</AnchorPane>
