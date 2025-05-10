@@ -28,7 +28,8 @@ public class LoginController {
                     .orElseThrow(() -> new Exception("Invalid credentials"));
 
             // Block users in 'pending' state
-            if (u.getRole() != null && "pending".equals(u.getRole().getName())) {
+            if (u.getRole() != null && ("" +
+                    "pending").equals(u.getRole().getName())) {
                 messageLabel.setText("Votre compte est en attente d'activation.");
                 return;
             }

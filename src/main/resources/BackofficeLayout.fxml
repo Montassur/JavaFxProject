@@ -1,27 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+
 <BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="org.example.controllers.LayoutController"
             stylesheets="@style.css">
 
-    <!-- Sidebar Navigation -->
+    <!-- Header Bar -->
+    <top>
+        <HBox spacing="10" alignment="CENTER_RIGHT" styleClass="header-bar" style="-fx-padding: 10;">
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="userNameLabel" styleClass="username-label"/>
+            <MenuButton fx:id="profileMenu" text="Mon Compte" styleClass="profile-menu">
+                <MenuItem text="Modifier Profil" onAction="#goProfile"/>
+                <MenuItem text="Déconnexion" onAction="#logout"/>
+            </MenuButton>
+        </HBox>
+    </top>
+
+    <!-- Sidebar -->
     <left>
-        <VBox fx:id="sidebar" styleClass="sidebar" spacing="10" alignment="TOP_LEFT">
+        <VBox fx:id="sidebar" spacing="10" alignment="TOP_LEFT" styleClass="sidebar">
             <Label text="BackOffice" styleClass="logo"/>
-            <Button fx:id="btnDashboard" text="Tableau de bord"   onAction="#goDashboard"/>
-            <Button fx:id="btnUsers"     text="Utilisateurs"      onAction="#goUsers"/>
-            <Button fx:id="btnTickets"   text="Tickets"          onAction="#goTickets"/>
-            <Button fx:id="btnReclamations" text="Réclamations"   onAction="#goReclamations"/>
-            <Button fx:id="btnSponsors"   text="Sponsors"         onAction="#goSponsors"/>
+            <Button fx:id="btnDashboard" text="Tableau de bord" onAction="#goDashboard"/>
+            <Button fx:id="btnUsers" text="Utilisateurs" onAction="#goUsers"/>
+            <Button fx:id="btnTickets" text="Tickets" onAction="#goTickets"/>
+            <Button fx:id="btnReclamations" text="Réclamations" onAction="#goReclamations"/>
+            <Button fx:id="btnSponsors" text="Sponsors" onAction="#goSponsors"/>
             <Region VBox.vgrow="ALWAYS"/>
-            <Button fx:id="btnLogout"    text="Déconnexion"       onAction="#logout"/>
         </VBox>
     </left>
 
-    <!-- Main Content Area -->
+    <!-- Content -->
     <center>
-        <StackPane fx:id="contentPane" />
+        <StackPane fx:id="contentPane"/>
     </center>
-
 </BorderPane>
